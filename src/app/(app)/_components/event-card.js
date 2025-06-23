@@ -1,7 +1,7 @@
 import { Pin } from 'lucide-react';
+import moment from 'moment';
 import Link from 'next/link';
 import React from 'react';
-import moment from 'moment';
 
 export const EventCard = ({ event }) => {
   return (

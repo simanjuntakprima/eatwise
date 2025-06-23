@@ -1,4 +1,4 @@
-import { ArrowLeft, LogIn, Sparkle } from 'lucide-react';
+import { ArrowLeft, Sparkle } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Layout({ children }) {

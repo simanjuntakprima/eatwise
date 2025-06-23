@@ -1,7 +1,8 @@
-import { getCurrentSession } from '@/services/auth';
-import { getEvents } from '@/services/event';
 import { Pin } from 'lucide-react';
 import moment from 'moment';
+
+import { getCurrentSession } from '@/services/auth';
+import { getEvents } from '@/services/event';
 
 export default async function Page() {
   const session = await getCurrentSession();

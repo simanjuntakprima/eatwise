@@ -1,7 +1,9 @@
-import { getAllEvents } from '@/services/event';
-import { EventCard } from './_components/event-card';
-import { getAllCategories } from '@/services/categories';
 import Link from 'next/link';
+
+import { getAllCategories } from '@/services/categories';
+import { getAllEvents } from '@/services/event';
+
+import { EventCard } from './_components/event-card';
 
 export default async function Page() {
   const events = await getAllEvents();

@@ -1,7 +1,9 @@
 import React from 'react';
-import { EventCard } from '../_components/event-card';
-import { getEventsByCategory } from '@/services/event';
+
 import { getCategoryBySlug } from '@/services/categories';
+import { getEventsByCategory } from '@/services/event';
+
+import { EventCard } from '../_components/event-card';
 
 export default async function Page({ params }) {
   const { categorySlug } = await params;

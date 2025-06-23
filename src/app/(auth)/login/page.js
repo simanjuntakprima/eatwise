@@ -1,11 +1,13 @@
 'use client';
 
+import Link from 'next/link';
+import { useActionState } from 'react';
+
+import { AlertState } from '@/app/_components/alert-state';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import Link from 'next/link';
+
 import { loginAction } from '../action';
-import { AlertState } from '@/app/_components/alert-state';
-import { useActionState } from 'react';
 
 export default function Page() {
   const [state, action, pending] = useActionState(loginAction, null);

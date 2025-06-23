@@ -1,9 +1,10 @@
 'use server';
 
-import { getUserByEmail, createUser } from '@/services/user';
-import { createSession, verifyPassword } from '@/services/auth';
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
+
+import { createSession, verifyPassword } from '@/services/auth';
+import { createUser, getUserByEmail } from '@/services/user';
 
 export async function loginAction(_, formData) {
   const cookieStore = await cookies();

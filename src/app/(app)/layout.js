@@ -1,9 +1,9 @@
+import { Plus, Sparkle } from 'lucide-react';
+import Link from 'next/link';
+import React from 'react';
+
 import { Button } from '@/components/ui/button';
 import { getCurrentSession } from '@/services/auth';
-import { CalendarIcon, HomeIcon, Plus, Sparkle } from 'lucide-react';
-import Link from 'next/link';
-import { redirect } from 'next/navigation';
-import React from 'react';
 
 export default async function Layout({ children }) {
   const session = await getCurrentSession();

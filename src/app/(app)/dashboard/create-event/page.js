@@ -1,4 +1,5 @@
 import { getAllCategories } from '@/services/categories';
+
 import { CreateEventForm } from './_components/create-event-form';
 
 export default async function Page() {

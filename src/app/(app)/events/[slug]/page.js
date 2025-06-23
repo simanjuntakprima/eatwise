@@ -1,6 +1,7 @@
-import { getEvent, getEventBySlug } from '@/services/event';
 import { PinIcon, Timer } from 'lucide-react';
 import moment from 'moment';
+
+import { getEventBySlug } from '@/services/event';
 
 export default async function Page({ params }) {
   const { slug } = await params;

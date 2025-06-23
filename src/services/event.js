@@ -1,5 +1,6 @@
-import prisma from '@/utils/prisma';
 import slugify from 'slugify';
+
+import prisma from '@/utils/prisma';
 
 export async function createEvent({ name, description, date, location, userId, categoryId }) {
   const slug = slugify(name, { lower: true, strict: true });

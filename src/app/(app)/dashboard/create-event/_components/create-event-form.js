@@ -1,10 +1,11 @@
 'use client';
 
+import React, { useActionState } from 'react';
+
+import { AlertState } from '@/app/_components/alert-state';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import React, { useActionState } from 'react';
-import { AlertState } from '@/app/_components/alert-state';
 import {
   Select,
   SelectContent,
@@ -14,6 +15,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
+
 import { createEventAction } from '../action';
 
 export function CreateEventForm({ categories }) {
