@@ -10,13 +10,16 @@ export async function verifyPassword(password, hashedPassword) {
 }
 
 export async function createSession(userId) {
+  // 30 days in milliseconds
+  const expiresAt = new Date(Date.now() + 1000 * 60 * 60 * 24 * 30);
+
   return await prisma.session.create({
-    data: { userId },
+    data: { userId, expiresAt },
   });
 }
 
 export async function getSession(sessionId) {
-  return await prisma.session.findUnique({
+  const session = await prisma.session.findUnique({
     where: { id: sessionId },
     include: {
       user: {
@@ -28,6 +31,16 @@ export async function getSession(sessionId) {
       },
     },
   });
+
+  if (!session) {
+    return null;
+  }
+
+  if (session.expiresAt < new Date()) {
+    return null;
+  }
+
+  return session;
 }
 
 export async function deleteSession(sessionId) {
