@@ -121,15 +121,15 @@
   }
 
   h1 {
-    @apply text-2xl font-bold;
+    @apply text-2xl font-bold tracking-tight;
   }
 
   h2 {
-    @apply text-xl font-bold;
+    @apply text-xl font-bold tracking-tight;
   }
 
   h3 {
-    @apply text-lg font-bold;
+    @apply text-lg font-bold tracking-tight;
   }
 
   p {
