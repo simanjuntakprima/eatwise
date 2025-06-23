@@ -1,24 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Minimal Production-Grade Next.js App (JavaScript)
+
+This is an example of a minimal production-grade Next.js application built with JavaScript. It serves as a starting point for building robust and scalable web applications.
+
+## Core Technologies
+
+- **Framework:** [Next.js](https://nextjs.org/) (App Router)
+- **Language:** JavaScript
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **UI Components:** [shadcn/ui](https://ui.shadcn.com/)
+- **ORM:** [Prisma](https://www.prisma.io/)
+- **Linting:** [ESLint](https://eslint.org/)
+
+## Project Structure
+
+A brief overview of the key directories and files:
+
+```
+.
+├── prisma/               # Prisma schema and migrations
+├── src/
+│   ├── app/              # Application routes (App Router)
+│   ├── components/       # Reusable React components
+│   ├── lib/              # Utility functions
+│   ├── services/         # Business logic (e.g., auth, user services)
+│   └── ...
+├── public/               # Static assets
+├── next.config.mjs       # Next.js configuration
+└── package.json          # Dependencies and scripts
+```
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js (v18.x or later)
+- Bun
+
+### Installation
+
+1.  Clone the repository:
+
+    ```bash
+    git clone <your-repo-url>
+    cd nextjs-prod
+    ```
+
+2.  Install dependencies:
+
+    ```bash
+    bun install
+    ```
+
+3.  **Database Setup**
+    - You'll need a PostgreSQL database.
+    - Create a `.env` file in the root of the project.
+    - Add your database connection string to the `.env` file:
+      ```
+      DATABASE_URL="postgresql://USER:PASSWORD@HOST:PORT/DATABASE"
+      ```
+    - Push the database schema:
+      ```bash
+      bunx prisma db push
+      ```
+
+### Running the Development Server
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open [http://localhost:3000](http://localhost:3000) to view the application in your browser.
 
 ## Learn More
 
