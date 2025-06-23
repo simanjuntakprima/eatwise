@@ -1,17 +1,17 @@
-import { Button } from "@/components/ui/button";
-import { getCurrentSession } from "@/services/auth";
-import { CalendarIcon, HomeIcon, Plus, Sparkle } from "lucide-react";
-import Link from "next/link";
-import { redirect } from "next/navigation";
-import React from "react";
+import { Button } from '@/components/ui/button';
+import { getCurrentSession } from '@/services/auth';
+import { CalendarIcon, HomeIcon, Plus, Sparkle } from 'lucide-react';
+import Link from 'next/link';
+import { redirect } from 'next/navigation';
+import React from 'react';
 
 export default async function Layout({ children }) {
   const session = await getCurrentSession();
 
   return (
-    <div className="w-full h-screen bg-gradient-to-b from-indigo-200 to-20% to-transparent space-y-12 pb-12">
-      <header className="flex justify-between items-center p-4 ">
-        <Link href="/" className="font-bold flex items-center gap-2">
+    <div className="h-screen w-full space-y-12 bg-gradient-to-b from-indigo-200 to-transparent to-20% pb-12">
+      <header className="flex items-center justify-between p-4">
+        <Link href="/" className="flex items-center gap-2 font-bold">
           <Sparkle size={16} />
           <div>eventmakers</div>
         </Link>
@@ -31,7 +31,7 @@ export default async function Layout({ children }) {
           </Link>
         )}
       </header>
-      <div className="max-w-6xl m-auto">{children}</div>
+      <div className="m-auto max-w-5xl pb-12">{children}</div>
     </div>
   );
 }

@@ -1,6 +1,6 @@
-import prisma from "@/utils/prisma";
-import bcrypt from "bcrypt";
-import { cookies } from "next/headers";
+import prisma from '@/utils/prisma';
+import bcrypt from 'bcrypt';
+import { cookies } from 'next/headers';
 
 export async function hashPassword(password) {
   return await bcrypt.hash(password, 10);
@@ -21,7 +21,7 @@ export async function createSession(userId) {
 
 export async function getCurrentSession() {
   const cookieStore = await cookies();
-  const session = cookieStore.get("session");
+  const session = cookieStore.get('session');
 
   if (!session) {
     return null;

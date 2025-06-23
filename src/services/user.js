@@ -1,5 +1,5 @@
-import prisma from "@/utils/prisma";
-import { hashPassword } from "./auth";
+import prisma from '@/utils/prisma';
+import { hashPassword } from './auth';
 
 export async function createUser(name, email, password) {
   const hashedPassword = await hashPassword(password);

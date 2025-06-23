@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import Link from "next/link";
-import { loginAction } from "../action";
-import { AlertState } from "@/components/shared/alert-state";
-import { useActionState } from "react";
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import Link from 'next/link';
+import { loginAction } from '../action';
+import { AlertState } from '@/app/_components/alert-state';
+import { useActionState } from 'react';
 
 export default function Page() {
   const [state, action, pending] = useActionState(loginAction, null);
@@ -20,7 +20,7 @@ export default function Page() {
         <Input name="email" type="email" placeholder="Email" />
         <Input name="password" type="password" placeholder="Password" />
         <Button type="submit" disabled={pending}>
-          {pending ? "Logging in..." : "Login"}
+          {pending ? 'Logging in...' : 'Login'}
         </Button>
         <AlertState success={state?.success} error={state?.error} />
       </form>
