@@ -1,3 +1,4 @@
+
 {
   "name": "nextjs-prod",
   "version": "0.1.0",
@@ -79,3 +80,4 @@
     "seed": "node prisma/seeder.js"
   }
 }
+
